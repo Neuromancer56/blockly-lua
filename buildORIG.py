@@ -28,8 +28,7 @@
 # been renamed.  The uncompressed file also allows for a faster developement
 # cycle since there is no need to rebuild or recompile, just reload.
 
-"""import glob, httplib, json, os, re, sys, threading, urllib"""
-import glob, json, os, re, sys, threading, urllib
+import glob, httplib, json, os, re, sys, threading, urllib
 
 def import_path(fullpath):
   """Import a file with full path specification.
@@ -244,9 +243,9 @@ class Gen_compressed(threading.Thread):
 
     if json_data.has_key('serverErrors'):
       errors = json_data['serverErrors']
-      """for error in errors:
+      for error in errors:
         print 'SERVER ERROR: %s' % target_filename
-         print error['error']"""
+        print error['error']
     elif json_data.has_key('errors'):
       errors = json_data['errors']
       for error in errors:
@@ -291,7 +290,7 @@ class Gen_compressed(threading.Thread):
         print('Size changed from %d KB to %d KB (%d%%).' % (
             original_kb, compressed_kb, ratio))
       else:
-        """print 'UNKNOWN ERROR'"""
+        print 'UNKNOWN ERROR'
 
 
 if __name__ == '__main__':

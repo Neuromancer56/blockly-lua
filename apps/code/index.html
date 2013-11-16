@@ -77,7 +77,51 @@
     <tr>
       <td height="99%" colspan=2 id="content_area">
         <xml id="toolbox" style="display: none">
-          <category name="ComputerCraft">
+            <category name="Minetest">
+            <block type="math_number"></block>
+            <block type="math_arithmetic"></block>
+            <block type="math_single"></block>
+            <block type="math_trig"></block>
+            <block type="math_constant"></block>
+            <block type="math_number_property"></block>
+            <block type="math_change">
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+            <block type="math_round"></block>
+            <block type="math_on_list"></block>
+            <block type="math_modulo"></block>
+            <block type="math_constrain">
+              <value name="LOW">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="HIGH">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+            </block>
+            <block type="math_random_int">
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+            </block>
+            <block type="math_random_float"></block>
+          </category>
+
+		  <category name="ComputerCraft">
             <category name="Turtle">
               <block type="turtle_move"></block>
               <block type="turtle_turn"></block>
@@ -241,7 +285,7 @@
               </value>
             </block>
             <block type="math_random_float"></block>
-          </category>
+          </category>		  
           <category name="Text">
             <block type="text_print"></block>
             <block type="text"></block>
